@@ -36,4 +36,9 @@
 <changefreq>monthly</changefreq>
 <priority>0.8</priority>
 </url>
+  <url>
+<loc>https://hippoelectric.ca/blog.html#tesla-charger-guide</loc>
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+</url>
 </urlset>
