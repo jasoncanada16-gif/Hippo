@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Licensed Electrician in Milton | EV Chargers, Pot Lights & Panel Upgrades | Hippo Electric</title>
+  <meta name="description" content="Licensed electrician in Milton specializing in EV charger installation, pot light installation, panel upgrades and residential electrical services. Free estimates available.">
+  <style>  
+  :root {
+      --orange: #f97316;
+      --orange-dark: #c2410c;
+      --navy: #0f172a;
+      --dark: #111827;
+      --text: #1f2937;
+      --muted: #6b7280;
+      --light: #f8fafc;
+      --white: #ffffff;
+      --border: #e5e7eb;
+      --shadow: 0 18px 45px rgba(15, 23, 42, 0.14);
+      --radius: 22px;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: Arial, Helvetica, sans-serif; color: var(--text); line-height: 1.6; background: white; }
+    a { color: inherit; text-decoration: none; }
+    img { width: 100%; display: block; }
+    .container { width: min(1180px, 92%); margin: auto; }
+
+    .topbar { background: var(--navy); color: white; font-size: 14px; padding: 9px 0; }
+    .topbar .container { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+
+    header { position: sticky; top: 0; z-index: 50; background: white; box-shadow: 0 2px 18px rgba(0,0,0,0.08); }
+    .nav { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 14px 0; }
+    .brand { display: flex; align-items: center; gap: 12px; font-weight: 900; color: var(--navy); font-size: 22px; }
+    .brand img { width: 70px; height: 70px; object-fit: contain; border-radius: 50%; background: white; box-shadow: 0 8px 22px rgba(0,0,0,0.12); }
+    .nav-links { display: flex; align-items: center; gap: 18px; font-size: 15px; font-weight: 700; flex-wrap: wrap; }
+    .nav-links a:hover { color: var(--orange-dark); }
+
+    .btn { display: inline-block; padding: 13px 22px; border-radius: 999px; background: var(--orange); color: white; border: 2px solid var(--orange); font-weight: 800; transition: 0.2s ease; cursor: pointer; text-align: center; }
+    .btn:hover { background: var(--orange-dark); border-color: var(--orange-dark); transform: translateY(-1px); }
+    .btn-outline { background: white; color: var(--orange-dark); }
+
+    .hero {
+      min-height: 710px;
+      background:
+        linear-gradient(90deg, rgba(15,23,42,0.92), rgba(15,23,42,0.62)),
+        url("images/hero-electrician.jpg");
+      background-size: cover;
+      background-position: center;
+      color: white;
+      display: flex;
+      align-items: center;
+      padding: 92px 0;
+    }
+
+    .hero-content { max-width: 790px; }
+    .badge { display: inline-flex; align-items: center; gap: 8px; background: rgba(249,115,22,0.16); color: #fed7aa; border: 1px solid rgba(249,115,22,0.5); padding: 8px 14px; border-radius: 999px; font-weight: 800; font-size: 14px; margin-bottom: 18px; }
+    h1 { font-size: clamp(40px, 6vw, 70px); line-height: 1.04; margin-bottom: 22px; letter-spacing: -1.5px; }
+    h2 { font-size: clamp(31px, 4vw, 48px); line-height: 1.15; color: var(--navy); margin: 10px 0 14px; }
+    h3 { color: var(--navy); }
+    .hero p { font-size: 20px; color: #f3f4f6; max-width: 720px; margin-bottom: 20px; }
+    .actions { display: flex; flex-wrap: wrap; gap: 14px; margin: 26px 0; }
+    .trust-row { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 24px; }
+    .trust-row span { background: rgba(255,255,255,0.13); border: 1px solid rgba(255,255,255,0.18); padding: 9px 13px; border-radius: 999px; font-weight: 800; font-size: 14px; }
+
+    section { padding: 82px 0; }
+    .light { background: var(--light); }
+    .section-title { max-width: 840px; text-align: center; margin: 0 auto 46px; }
+    .eyebrow { color: var(--orange-dark); font-weight: 900; font-size: 14px; text-transform: uppercase; letter-spacing: 1px; }
+    .lead, .section-title p { color: var(--muted); font-size: 18px; }
+
+    .featured-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .card { background: white; border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); }
+    .card img { height: 245px; object-fit: cover; }
+    .card-body { padding: 26px; }
+    .card h3 { font-size: 25px; line-height: 1.2; margin-bottom: 12px; }
+    .card p { color: var(--muted); margin-bottom: 16px; }
+
+    ul { list-style: none; margin: 18px 0 22px; }
+    li { margin: 9px 0; color: var(--muted); }
+    li::before { content: "✓"; color: var(--orange); font-weight: 900; margin-right: 8px; }
+
+    .service { display: grid; grid-template-columns: 1fr 1fr; gap: 46px; align-items: center; }
+    .service img { border-radius: var(--radius); box-shadow: var(--shadow); min-height: 430px; object-fit: cover; }
+    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 14px 24px; }
+    .chips { display: flex; flex-wrap: wrap; gap: 10px; margin: 20px 0 26px; }
+    .chips span { background: #fff7ed; color: var(--orange-dark); border: 1px solid #fed7aa; border-radius: 999px; padding: 8px 12px; font-weight: 800; font-size: 14px; }
+
+    .why-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
+    .why-item { background: white; border: 1px solid var(--border); border-radius: 16px; padding: 22px; box-shadow: 0 10px 25px rgba(15,23,42,0.08); font-weight: 900; color: var(--navy); }
+
+    .secondary-grid, .gallery-grid, .vehicle-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+    .secondary-card { background: white; border: 1px solid var(--border); border-radius: var(--radius); padding: 28px; box-shadow: 0 10px 25px rgba(15,23,42,0.08); }
+    .gallery-item { position: relative; overflow: hidden; border-radius: var(--radius); box-shadow: var(--shadow); min-height: 230px; background: #ddd; }
+    .gallery-item img { height: 255px; object-fit: cover; }
+    .gallery-item span { position: absolute; left: 16px; bottom: 16px; background: rgba(15,23,42,0.78); color: white; padding: 8px 12px; border-radius: 999px; font-weight: 900; }
+
+    .ev-page { background: var(--navy); color: white; }
+    .ev-page h2, .ev-page h3 { color: white; }
+    .ev-page .lead, .ev-page li { color: #d1d5db; }
+    .vehicle { background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.13); border-radius: 16px; padding: 18px; text-align: center; font-weight: 900; }
+
+    .contact-wrap { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 34px; align-items: start; }
+    form { background: white; border: 1px solid var(--border); border-radius: var(--radius); box-shadow: var(--shadow); padding: 30px; }
+    label { display: block; font-weight: 800; margin: 14px 0 6px; }
+    input, select, textarea { width: 100%; border: 1px solid #d1d5db; border-radius: 12px; padding: 13px 14px; font-size: 16px; font-family: inherit; }
+    textarea { min-height: 125px; resize: vertical; }
+
+    .reviews { background: white; border-radius: var(--radius); border: 1px solid var(--border); padding: 28px; box-shadow: var(--shadow); text-align: center; }
+    .stars { color: #f59e0b; font-size: 24px; letter-spacing: 2px; margin-bottom: 10px; }
+
+    .cta { background: linear-gradient(135deg, var(--navy), #1f2937); color: white; text-align: center; padding: 72px 0; }
+    .cta h2 { color: white; }
+    .cta p { color: #e5e7eb; font-size: 18px; }
+
+    footer { background: #080d18; color: white; padding: 58px 0 24px; }
+    .footer-grid { display: grid; grid-template-columns: 1.25fr 1fr 1fr 1fr; gap: 30px; margin-bottom: 34px; }
+    footer h3, footer h4 { margin-bottom: 14px; }
+    footer a, footer p { color: #d1d5db; display: block; margin: 8px 0; }
+    .footer-logo { width: 78px; height: 78px; object-fit: contain; background: white; border-radius: 50%; margin-bottom: 12px; }
+    .copyright { border-top: 1px solid rgba(255,255,255,0.14); padding-top: 20px; color: #d1d5db; display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; font-size: 14px; }
+
+    @media (max-width: 920px) {
+      .nav { flex-direction: column; align-items: flex-start; }
+      .featured-grid, .service, .contact-wrap, .footer-grid { grid-template-columns: 1fr; }
+      .why-grid, .secondary-grid, .gallery-grid, .vehicle-grid { grid-template-columns: repeat(2, 1fr); }
+      .service img { min-height: 300px; }
+    }
+
+    @media (max-width: 560px) {
+      .topbar .container, .actions { flex-direction: column; }
+      .why-grid, .secondary-grid, .gallery-grid, .vehicle-grid, .two-col { grid-template-columns: 1fr; }
+      section { padding: 58px 0; }
+      .hero { min-height: auto; padding: 70px 0; }
+      .brand { font-size: 19px; }
+    }
+  </style>
+  <script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Electrician",
+  "name":"Hippo Electric Service",
+  "url":"https://hippoelectric.ca",
+  "telephone":"+1-905-616-5199",
+  "email":"jasoncanada16@gmail.com",
+  "areaServed":[
+    "Mississauga",
+    "Oakville",
+    "Burlington",
+    "Milton",
+    "Hamilton",
+    "Etobicoke",
+    "North York",
+    "Scarborough",
+    "Vaughan",
+    "Markham"
+  ],
+  "serviceType":[
+    "EV Charger Installation",
+    "Pot Light Installation",
+    "Panel Upgrade",
+    "Outdoor Electrical Work",
+    "Residential Electrical Services"
+  ]
+}
+</script>
+</head>
+
+<body>
+  <div class="topbar">
+    <div class="container">
+      <span>Licensed & Insured Ontario Electrical Contractor</span>
+      <span><a href="tel:9056165199">905-616-5199</a> · <a href="mailto:jasoncanada16@gmail.com">jasoncanada16@gmail.com</a></span>
+    </div>
+  </div>
+
+  <header>
+    <div class="container nav">
+      <a href="#home" class="brand">
+        <img src="images/logo.png" alt="Hippo Electric Service logo">
+        <span>Hippo Electric Service</span>
+      </a>
+      <nav class="nav-links">
+        <a href="#ev">EV Chargers</a>
+        <a href="#potlights">Pot Lights</a>
+        <a href="#panel">Panel Upgrades</a>
+        <a href="#services">Services</a>
+        <a href="blog.html">Blog</a>
+        <a href="#contact">Contact</a>
+        <a class="btn" href="tel:9056165199">Call Now</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container hero-content">
+        <span class="badge">⚡ Local Canadian Electrical Contractor</span>
+       <h1>Licensed Electrician in Milton</h1>
+       <p>
+Hippo Electric provides professional residential electrical services in Milton, including EV charger installation, pot light installation, panel upgrades, lighting installation and electrical troubleshooting.
+</p>
+
+<h2>Electrical Services in Milton</h2>
+
+<p>
+We proudly serve homeowners throughout Milton with professional electrical services, including EV charger installations, pot lights, panel upgrades, outdoor outlets and lighting upgrades.
+</p>
+</p>
+        <p><strong>Phone:</strong> <a href="tel:9056165199">905-616-5199</a> · <strong>Email:</strong> <a href="mailto:jasoncanada16@gmail.com">jasoncanada16@gmail.com</a></p>
+        <div class="actions">
+          <a class="btn" href="tel:9056165199">Call Now: 905-616-5199</a>
+          <a class="btn btn-outline" href="#contact">Request a Free Quote</a>
+        </div>
+        <div class="trust-row">
+          <span>ESA Code-Compliant</span>
+          <span>Clean Workmanship</span>
+          <span>Free Estimates</span>
+          <span>Residential & Commercial</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="light" id="featured">
+      <div class="container">
+        <div class="section-title">
+          <span class="eyebrow">Our Featured Services</span>
+          <h2>Specialists in EV Chargers, Pot Lights & Panel Upgrades</h2>
+          <p>These three services are the main focus of Hippo Electric Service.</p>
+        </div>
+
+        <div class="featured-grid">
+          <article class="card">
+            <img src="images/ev-charger.jpg" alt="Tesla home EV charger installation">
+            <div class="card-body">
+              <h3>EV Charger Installation</h3>
+              <p>Tesla charger installation, Level 2 EV charger installation, dedicated circuits, and panel assessments.</p>
+              <ul>
+                <li>Charge up to 8x faster</li>
+                <li>Indoor and outdoor installation</li>
+                <li>Licensed EV charger electrician</li>
+              </ul>
+              <a class="btn" href="#ev">Get Your EV Charger Installed</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <img src="images/pot-lights.jpg" alt="Modern LED pot light installation">
+            <div class="card-body">
+              <h3>Pot Light Installation</h3>
+              <p>Modern LED pot light installation for kitchens, basements, living rooms, and exterior soffits.</p>
+              <ul>
+                <li>Clean ceiling design</li>
+                <li>Better brightness</li>
+                <li>Energy-efficient LED lighting</li>
+              </ul>
+              <a class="btn" href="#potlights">Transform Your Home</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <img src="images/panel-upgrade.jpg" alt="Electrical panel upgrade">
+            <div class="card-body">
+              <h3>Panel & Service Upgrades</h3>
+              <p>100 amp to 200 amp service upgrades, electrical panel replacement, sub-panels, and EV-ready upgrades.</p>
+              <ul>
+                <li>Increased electrical capacity</li>
+                <li>Improved safety</li>
+                <li>Future renovation support</li>
+              </ul>
+              <a class="btn" href="#panel">Upgrade Safely</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="ev">
+      <div class="container service">
+        <div>
+          <span class="eyebrow">Featured Service #1</span>
+          <h2>EV Charger Installation Ontario</h2>
+          <p class="lead">Get reliable Tesla charger installation, Level 2 EV charger installation, and home EV charger installation from a licensed EV charger electrician near you.</p>
+          <div class="two-col">
+            <ul>
+              <li>Tesla Wall Connector Installation</li>
+              <li>Level 2 EV Charger Installation</li>
+              <li>Home EV Charging Solutions</li>
+              <li>Commercial EV Charging Solutions</li>
+              <li>Dedicated Circuit Installation</li>
+            </ul>
+            <ul>
+              <li>Electrical Panel Assessment</li>
+              <li>ESA Code-Compliant Installation</li>
+              <li>Indoor Charger Installation</li>
+              <li>Outdoor Charger Installation</li>
+              <li>Permit and Code-Compliant Installation</li>
+            </ul>
+          </div>
+          <div class="chips">
+            <span>Charge up to 8x faster</span>
+            <span>Overnight charging</span>
+            <span>Future-ready home</span>
+            <span>Increased property value</span>
+          </div>
+          <a class="btn" href="#contact">Get Your EV Charger Installed Today</a>
+          <a class="btn btn-outline" href="tel:9056165199">Call 905-616-5199</a>
+        </div>
+        <img src="images/ev-charger.jpg" alt="Home EV charger installation">
+      </div>
+    </section>
+
+    <section class="light" id="potlights">
+      <div class="container service">
+        <img src="images/pot-lights.jpg" alt="Pot lights in modern ceiling">
+        <div>
+          <span class="eyebrow">Featured Service #2</span>
+          <h2>Professional LED Pot Light Installation</h2>
+          <p class="lead">Create a brighter, cleaner, and more modern home with professional pot light installation for kitchens, basements, living rooms, and exterior soffits.</p>
+          <div class="two-col">
+            <ul>
+              <li>LED Pot Light Installation</li>
+              <li>Basement Pot Light Installation</li>
+              <li>Kitchen Pot Lights</li>
+              <li>Living Room Pot Lights</li>
+            </ul>
+            <ul>
+              <li>Exterior Soffit Pot Lights</li>
+              <li>Smart Lighting Integration</li>
+              <li>Customized Lighting Layouts</li>
+              <li>Pot Light Electrician Service</li>
+            </ul>
+          </div>
+          <div class="chips">
+            <span>Modern appearance</span>
+            <span>Increased home value</span>
+            <span>Improved brightness</span>
+            <span>Elegant ceiling design</span>
+          </div>
+          <a class="btn" href="#contact">Transform Your Home with Professional Pot Lighting</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="panel">
+      <div class="container service">
+        <div>
+          <span class="eyebrow">Featured Service #3</span>
+          <h2>Panel Upgrades & 200 Amp Service Upgrades</h2>
+          <p class="lead">Prepare your home for EV chargers, renovations, additions, and modern electrical needs with a safe electrical panel upgrade or service upgrade in Ontario.</p>
+          <div class="two-col">
+            <ul>
+              <li>100 Amp to 200 Amp Service Upgrades</li>
+              <li>Electrical Panel Replacement</li>
+              <li>Sub-Panel Installation</li>
+              <li>Renovation Electrical Upgrades</li>
+            </ul>
+            <ul>
+              <li>EV Charger Ready Panel Upgrades</li>
+              <li>Basement and Addition Upgrades</li>
+              <li>Electrical Capacity Assessment</li>
+              <li>Electrical Service Upgrade Ontario</li>
+            </ul>
+          </div>
+          <div class="chips">
+            <span>Increased capacity</span>
+            <span>Improved safety</span>
+            <span>Supports EV chargers</span>
+            <span>Modernized system</span>
+          </div>
+          <a class="btn" href="#contact">Upgrade Your Electrical System Safely</a>
+        </div>
+        <img src="images/panel-upgrade.jpg" alt="200 amp panel upgrade">
+      </div>
+    </section>
+
+    <section class="light" id="services">
+      <div class="container">
+        <div class="section-title">
+          <span class="eyebrow">Additional Electrical Services</span>
+          <h2>Supporting Services</h2>
+          <p>These services are also available for homeowners and small businesses.</p>
+        </div>
+        <div class="secondary-grid">
+          <div class="secondary-card">
+            <h3>Electrical Repairs</h3>
+            <p>Troubleshooting, outlets, switches, breakers, wiring repairs, and general electrical services.</p>
+          </div>
+          <div class="secondary-card">
+            <h3>Light Installation</h3>
+            <p>Chandeliers, ceiling lights, outdoor lighting, landscape lighting, and smart lighting systems.</p>
+          </div>
+          <div class="secondary-card">
+            <h3>Lighting Sales</h3>
+            <p>Quality lighting products for homes and businesses, selected for performance and value.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="why">
+      <div class="container">
+        <div class="section-title">
+          <span class="eyebrow">Why Choose Us</span>
+          <h2>Why Homeowners Choose Hippo Electric Service</h2>
+        </div>
+        <div class="why-grid">
+          <div class="why-item">Licensed & Insured</div>
+          <div class="why-item">ESA Code-Compliant Work</div>
+          <div class="why-item">Free Estimates</div>
+          <div class="why-item">Clean Workmanship</div>
+          <div class="why-item">Reliable Scheduling</div>
+          <div class="why-item">Quality Materials</div>
+          <div class="why-item">Competitive Pricing</div>
+          <div class="why-item">Residential & Commercial</div>
+          <div class="why-item">EV Charger Specialists</div>
+          <div class="why-item">Pot Light Specialists</div>
+          <div class="why-item">Panel Upgrade Specialists</div>
+          <div class="why-item">Customer Satisfaction Focus</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="light" id="gallery">
+      <div class="container">
+        <div class="section-title">
+          <span class="eyebrow">Project Gallery</span>
+          <h2>Electrical Work Photo Sections</h2>
+        </div>
+        <div class="gallery-grid">
+          <div class="gallery-item"><img src="images/ev-charger.jpg" alt="EV charger installation"><span>EV Charger Installations</span></div>
+          <div class="gallery-item"><img src="images/pot-lights.jpg" alt="Pot light installation"><span>Pot Light Installations</span></div>
+          <div class="gallery-item"><img src="images/panel-upgrade.jpg" alt="Panel upgrades"><span>Panel Upgrades</span></div>
+          <div class="gallery-item"><img src="images/hero-electrician.jpg" alt="Electrical work"><span>Electrical Work</span></div>
+          <div class="gallery-item"><img src="images/indoor-lighting.jpg" alt="Indoor lighting installation"><span>Indoor Lighting</span></div>
+          <div class="gallery-item"><img src="images/outdoor-lighting.jpg" alt="Outdoor lighting installation"><span>Outdoor Lighting</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ev-page" id="ev-charger-installation">
+      <div class="container">
+        <div class="section-title">
+          <span class="badge">Dedicated Service Page</span>
+          <h2>EV Charger Installation in Ontario</h2>
+          <p class="lead">Professional Home and Commercial EV Charger Installation</p>
+        </div>
+        <p class="lead">We provide professional EV charger installation services for homeowners and businesses. Whether you drive a Tesla, Ford, Hyundai, Kia, Chevrolet, BMW, Mercedes-Benz, or any other electric vehicle, we can install a safe and reliable Level 2 charging solution.</p>
+
+        <div class="service" style="margin-top:40px;">
+          <div>
+            <h3>Services Included</h3>
+            <ul>
+              <li>Tesla Wall Connector Installation</li>
+              <li>Level 2 EV Charger Installation</li>
+              <li>Dedicated Circuit Installation</li>
+              <li>Electrical Panel Assessment</li>
+              <li>Panel Upgrades if Required</li>
+              <li>Indoor Charger Installation</li>
+              <li>Outdoor Charger Installation</li>
+              <li>Permit and Code-Compliant Installation</li>
+            </ul>
+          </div>
+          <div>
+            <h3>Why Install a Level 2 Charger?</h3>
+            <ul>
+              <li>Faster Charging</li>
+              <li>Greater Convenience</li>
+              <li>Increased Property Value</li>
+              <li>Improved Energy Efficiency</li>
+              <li>Safe and Reliable Home Charging</li>
+            </ul>
+          </div>
+        </div>
+
+        <h3 style="margin-top:42px;">Popular Electric Vehicles We Support</h3>
+        <div class="vehicle-grid" style="margin-top:18px;">
+          <div class="vehicle">Tesla</div>
+          <div class="vehicle">Ford Mustang Mach-E</div>
+          <div class="vehicle">Hyundai IONIQ 5</div>
+          <div class="vehicle">Kia EV6</div>
+          <div class="vehicle">Chevrolet Equinox EV</div>
+          <div class="vehicle">Chevrolet Blazer EV</div>
+          <div class="vehicle">BMW EV Models</div>
+          <div class="vehicle">Mercedes-Benz EQ Series</div>
+          <div class="vehicle">Other Electric Vehicles</div>
+        </div>
+
+        <div class="actions" style="margin-top:34px;">
+          <a class="btn" href="#contact">Request a Free Quote</a>
+          <a class="btn btn-outline" href="tel:9056165199">Call 905-616-5199</a>
+          <a class="btn btn-outline" href="mailto:jasoncanada16@gmail.com">Email Us</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="light">
+      <div class="container">
+        <div class="reviews">
+          <div class="stars">★★★★★</div>
+          <h2>Google Reviews Coming Soon</h2>
+          <p class="lead">A dedicated review area is ready for future customer testimonials and Google review links.</p>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="light" id="blog-preview">
+      <div class="container">
+        <div class="section-title">
+          <span class="eyebrow">Helpful Electrical Tips</span>
+          <h2>Latest Articles</h2>
+          <p>Learn about EV charger installation, panel upgrades, pot lights, and electrical safety.</p>
+        </div>
+        <div class="secondary-grid">
+          <div class="secondary-card">
+            <h3>Do You Need a Panel Upgrade for an EV Charger?</h3>
+            <p>Many homes need an electrical panel assessment before installing a Level 2 EV charger.</p>
+            <a class="btn" href="blog.html">Read Blog</a>
+          </div>
+          <div class="secondary-card">
+            <h3>How Home EV Charger Installation Works</h3>
+            <p>A basic guide to dedicated circuits, charger location, and safe installation planning.</p>
+            <a class="btn" href="blog.html">Read Blog</a>
+          </div>
+          <div class="secondary-card">
+            <h3>Why Homeowners Choose LED Pot Lights</h3>
+            <p>Pot lights can make kitchens, basements, living rooms, and hallways brighter and more modern.</p>
+            <a class="btn" href="blog.html">Read Blog</a>
+          </div>
+        </div>
+      </div>
+    </section>
+<section style="background:#f8fafc;padding:80px 0;">
+  <div class="container">
+    <div class="section-title">
+      <span class="eyebrow">Electrical Tips</span>
+      <h2>Latest Blog Articles</h2>
+      <p>Helpful guides about EV charger installation, panel upgrades, and pot lights in Ontario.</p>
+    </div>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;">
+
+      <div style="background:white;padding:24px;border-radius:18px;box-shadow:0 10px 30px rgba(0,0,0,.08);">
+        <h3>Do I Need a 200 Amp Panel Upgrade for an EV Charger?</h3>
+        <p>Learn when a panel upgrade is required and when your existing electrical service may be sufficient.</p>
+        <a class="btn" href="blog.html#panel-upgrade-ev">Read Article</a>
+      </div>
+
+      <div style="background:white;padding:24px;border-radius:18px;box-shadow:0 10px 30px rgba(0,0,0,.08);">
+        <h3>How Much Does EV Charger Installation Cost in Ontario?</h3>
+        <p>A homeowner's guide to installation costs, electrical requirements, and common upgrades.</p>
+        <a class="btn" href="blog.html#ev-charger-guide">Read Article</a>
+      </div>
+<div style="background:white;padding:24px;border-radius:18px;box-shadow:0 10px 30px rgba(0,0,0,.08);">
+    <h3>How Much Does a 200 Amp Panel Upgrade Cost in Ontario?</h3>
+    <p>Learn typical panel upgrade costs, permit requirements, and when a 200 amp service upgrade may be needed.</p>
+    <a class="btn" href="blog.html#pot-light-guide">Read Article</a>
+</div>
+<div style="background:white;padding:24px;border-radius:18px;box-shadow:0 10px 30px rgba(0,0,0,.08);">
+  <h3>How Much Does It Cost to Install an Outdoor Outlet in Ontario?</h3>
+  <p>Learn outdoor outlet installation costs, GFCI requirements, weatherproof protection, and common electrical upgrades.</p>
+  <a class="btn" href="blog.html#outdoor-outlet-guide">Read Article</a>
+</div>
+<div style="background:white;padding:24px;border-radius:18px;box-shadow:0 10px 30px rgba(0,0,0,.08);">
+  <h3>How Much Does It Cost to Install a Tesla Charger in Ontario?</h3>
+  <p>Learn Tesla Wall Connector installation costs, panel capacity requirements, dedicated circuits, and inspection considerations.</p>
+  <a class="btn" href="blog.html#tesla-charger-guide">Read Article</a>
+</div>
+    </div>
+    <div style="background:white;padding:24px;border-radius:18px;box-shadow:0 10px 30px rgba(0,0,0,.08);">
+  <h3>How Much Does Pot Light Installation Cost in Ontario?</h3>
+  <p>Learn pot light installation costs, ceiling access factors, dimmer options, and common lighting upgrade considerations.</p>
+  <a class="btn" href="blog.html#pot-light-cost-guide">Read Article</a>
+</div>
+  </div>
+</section>
+
+
+
+
+
+    
+    <section style="padding:80px 0;background:#f8fafc;">
+  <div class="container">
+    
+    <div class="section-title">
+      <span class="eyebrow">Service Areas</span>
+      <h2>Areas We Serve</h2>
+      <p>
+        Hippo Electric proudly provides electrical services throughout the GTA and surrounding communities.
+      </p>
+    </div>
+
+    <p style="text-align:center;font-size:18px;line-height:1.8;">
+      Mississauga • Oakville • Burlington • Milton • Hamilton • Etobicoke • North York • Scarborough • Vaughan • Markham • Richmond Hill • Ajax • Pickering
+    </p>
+
+  </div>
+</section>
+    <section style="padding:80px 0;background:#ffffff;">
+  <div class="container">
+
+    <div class="section-title">
+      <span class="eyebrow">Customer Trust</span>
+      <h2>Trusted Local Electrical Service</h2>
+      <p>
+        Hippo Electric is building long-term trust with homeowners across Mississauga, Oakville, Burlington, Milton, Hamilton and the GTA.
+      </p>
+    </div>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px;">
+      <div style="background:#f8fafc;padding:24px;border-radius:18px;box-shadow:0 10px 30px rgba(0,0,0,.06);">
+        <h3>Residential Electrical Work</h3>
+        <p>Professional service for homeowners, landlords and small businesses.</p>
+      </div>
+
+      <div style="background:#f8fafc;padding:24px;border-radius:18px;box-shadow:0 10px 30px rgba(0,0,0,.06);">
+        <h3>EV Charger & Panel Planning</h3>
+        <p>Careful review of panel capacity, wiring distance and installation requirements.</p>
+      </div>
+
+      <div style="background:#f8fafc;padding:24px;border-radius:18px;box-shadow:0 10px 30px rgba(0,0,0,.06);">
+        <h3>Clear Communication</h3>
+        <p>Friendly explanation, practical recommendations and free estimate requests.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+    <section style="padding:80px 0;">
+  <div class="container">
+
+    <div class="section-title">
+      <span class="eyebrow">FAQ</span>
+      <h2>Frequently Asked Questions</h2>
+    </div>
+
+    <div style="max-width:900px;margin:auto;">
+
+      <h3>How much does EV charger installation cost in Ontario?</h3>
+      <p>
+        Most EV charger installations range from $500 to $2,000 depending on wiring distance, electrical panel capacity, charger type and installation complexity.
+      </p>
+
+      <h3>Do I need a panel upgrade for an EV charger?</h3>
+      <p>
+        Not always. A licensed electrician can perform a load calculation to determine whether your existing electrical service can safely support a Level 2 EV charger.
+      </p>
+
+      <h3>How much does a 200 amp panel upgrade cost?</h3>
+      <p>
+        A typical 200 amp panel upgrade in Ontario ranges from $2,500 to $5,500 depending on the existing service, utility requirements and equipment needed.
+      </p>
+
+      <h3>How much does pot light installation cost?</h3>
+      <p>
+        Pot light installation typically costs between $150 and $250 per light depending on ceiling accessibility, wiring requirements and the type of fixtures selected.
+      </p>
+
+      <h3>How long does a panel upgrade take?</h3>
+      <p>
+        Most residential panel upgrades can be completed within one day, including coordination with the utility company and ESA inspection requirements.
+      </p>
+
+      <h3>Which areas do you serve?</h3>
+      <p>
+        Hippo Electric proudly serves Mississauga, Oakville, Burlington, Milton, Hamilton and surrounding GTA communities.
+      </p>
+
+    </div>
+
+  </div>
+</section>
+    <section id="contact">
+      <div class="container contact-wrap">
+        <div>
+          <span class="eyebrow">Contact Us</span>
+          <h2>Request a Free Quote</h2>
+          <p class="lead">Need an EV charger installed, pot lights added, or an electrical panel upgraded? Contact Hippo Electric Service today.</p>
+          <p><strong>Phone:</strong> <a href="tel:9056165199">905-616-5199</a></p>
+          <p><strong>Email:</strong> <a href="mailto:jasoncanada16@gmail.com">jasoncanada16@gmail.com</a></p>
+          <div class="actions">
+            <a class="btn" href="tel:9056165199">Call Now: 905-616-5199</a>
+            <a class="btn btn-outline" href="mailto:jasoncanada16@gmail.com">Email Us</a>
+          </div>
+        </div>
+
+        <form action="https://formsubmit.co/jasoncanada16@gmail.com" method="POST">
+          <input type="hidden" name="_subject" value="New Quote Request - Hippo Electric Service">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_template" value="table">
+          <h3>Get a Free Estimate</h3>
+          <label for="name">Full Name *</label>
+          <input id="name" name="Full Name" type="text" required>
+          <label for="phone">Phone Number *</label>
+          <input id="phone" name="Phone Number" type="tel" required>
+          <label for="email">Email Address *</label>
+          <input id="email" name="Email Address" type="email" required>
+          <label for="service">Service Needed *</label>
+          <select id="service" name="Service Needed" required>
+            <option value="">Select a service</option>
+            <option>EV Charger Installation</option>
+            <option>Pot Light Installation</option>
+            <option>Panel Upgrade / 200 Amp Service Upgrade</option>
+            <option>Electrical Repairs</option>
+            <option>Light Installation</option>
+            <option>Lighting Sales</option>
+            <option>Other</option>
+          </select>
+          <label for="message">Project Details</label>
+          <textarea id="message" name="Project Details" placeholder="Tell us about your project..."></textarea>
+          <button class="btn" type="submit" style="margin-top:18px;">Request a Free Quote</button>
+        </form>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div class="container">
+        <h2>Need a Licensed Electrician in Ontario?</h2>
+        <p>Call Hippo Electric Service today for EV charger installation, pot light installation, panel upgrades, lighting, and electrical repair services.</p>
+        <div class="actions" style="justify-content:center;">
+          <a class="btn" href="tel:9056165199">Call Now: 905-616-5199</a>
+          <a class="btn btn-outline" href="#contact">Get a Free Estimate</a>
+          <a class="btn btn-outline" href="mailto:jasoncanada16@gmail.com">Email Us</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-grid">
+      <div>
+        <img class="footer-logo" src="images/logo.png" alt="Hippo Electric Service logo">
+        <h3>Hippo Electric Service</h3>
+        <p>Professional electrical, lighting, EV charger installation, pot light installation, and panel upgrade services in Ontario.</p>
+        <p>Phone: <a href="tel:9056165199">905-616-5199</a></p>
+        <p>Email: <a href="mailto:jasoncanada16@gmail.com">jasoncanada16@gmail.com</a></p>
+      </div>
+      <div>
+        <h4>Main Services</h4>
+        <a href="#ev">EV Charger Installation</a>
+        <a href="#potlights">Pot Light Installation</a>
+        <a href="#panel">Panel Upgrades</a>
+        <a href="#ev-charger-installation">EV Charger Page</a>
+      </div>
+      <div>
+        <h4>Other Services</h4>
+        <a href="#services">Electrical Repairs</a>
+        <a href="#services">Light Installation</a>
+        <a href="#services">Lighting Sales</a>
+        <a href="#gallery">Gallery</a>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <a href="tel:9056165199">Call Now: 905-616-5199</a>
+        <a href="mailto:jasoncanada16@gmail.com">Email Us</a>
+        <a href="#contact">Request a Free Quote</a>
+      </div>
+    </div>
+    <div class="container copyright">
+      <span>© 2026 Hippo Electric Service. All rights reserved.</span>
+      <span>Licensed · Insured · ESA Code-Compliant Work</span>
+    </div>
+  </footer>
+</body>
+</html>
